@@ -8,16 +8,10 @@ def is_palindrome(number)
     until first_num < 10
       first_num /= 10
       i += 1
-    # end
+    end
     last_num = number % 10
+    return false if first_num != last_num
     number = (number % 10**i) / 10
-    end
-    if first_num != last_num
-      false
-    end
   end
   true
 end
-
-
-# time complexity is O(n)
